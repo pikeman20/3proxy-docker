@@ -64,14 +64,14 @@ COPY 3proxy.cfg.mustach ./etc/3proxy/3proxy.cfg.mustach
 RUN chown -R 10001:10001 ./etc/3proxy
 
 # Merge into a single layer
-FROM docker.io/library/busybox:stable-glibc
+FROM debian:bookworm-slim
 
 LABEL \
     org.opencontainers.image.title="3proxy" \
     org.opencontainers.image.description="Tiny free proxy server" \
-    org.opencontainers.image.url="https://github.com/tarampampam/3proxy-docker" \
-    org.opencontainers.image.source="https://github.com/tarampampam/3proxy-docker" \
-    org.opencontainers.image.vendor="Tarampampam" \
+    org.opencontainers.image.url="https://github.com/pikeman20/3proxy-docker" \
+    org.opencontainers.image.source="https://github.com/pikeman20/3proxy-docker" \
+    org.opencontainers.image.vendor="pikeman20" \
     org.opencontainers.image.licenses="WTFPL"
 
 # Import from builder
